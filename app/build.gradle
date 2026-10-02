@@ -1,0 +1,30 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'id.tabungyuk.app'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'id.tabungyuk.app'
+        minSdk 23
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+    }
+    // Kunci pengembangan disertakan hanya untuk sideload/proyek sekolah.
+    // Jangan gunakan kunci ini untuk distribusi produksi atau Play Store.
+    signingConfigs {
+        development {
+            storeFile file('development.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+    buildTypes {
+        debug { signingConfig signingConfigs.development }
+        release { signingConfig signingConfigs.development; minifyEnabled false }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
