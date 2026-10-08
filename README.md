@@ -20,7 +20,7 @@ Buka folder ini sebagai proyek Gradle di Android Studio. Gunakan JDK 17, Gradle 
 
 URL ada di `app/src/main/java/id/tabungyuk/app/MainActivity.java` pada HOME dan pengecekan domain di route(). Ubah keduanya bila domain berubah.
 
-Kunci `app/development.keystore` sengaja disertakan untuk rebuild proyek percobaan ini. Password store/key: android, alias: androiddebugkey. Kunci ini BUKAN rahasia produksi. Gunakan kunci privat sendiri untuk distribusi publik. Untuk memperbarui APK yang telah dipasang, gunakan kunci yang sama dan naikkan versionCode.
+Kunci `app/development.keystore` sengaja disertakan untuk rebuild proyek percobaan ini. Password store/key: android, alias: androiddebugkey. Kunci ini BUKAN rahasia produksi.
 
 ## Validasi versi 1.0
-APK dibangun dari kode Java menggunakan ECJ dan Android Build Tools resmi (aapt2, D8, zipalign, apksigner). Tanda tangan APK v1/v2/v3 diverifikasi; manifest, activity launcher, API minimum, izin internet, dan keberadaan DEX diperiksa.
+APK dibangun dari kode Java menggunakan ECJ dan Android Build Tools resmi (aapt2, D8, zipalign, apksigner). Tanda tangan APK v1/v2/v3 diverifikasi; manifest, activity launcher, API minimum, izin internet, dan keberadaan DEX telah diperiksa.
